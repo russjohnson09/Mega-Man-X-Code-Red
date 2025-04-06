@@ -1,4 +1,19 @@
 [
-	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, "Text":"test"},
+	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
+	"Text":"Hello my robot son."},
+	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
+	"Text":"Mega Man, Mega Man."},
+	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
+	"Text":"Hello Dr. Light."},
+	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
+	"Text":"test"},
+	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
+	"Text":"test"},
+	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
+	"Text":"test"},
+	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
+	"Text":"test"},
+	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2,
+	 "Text":"test"}
 
 ]

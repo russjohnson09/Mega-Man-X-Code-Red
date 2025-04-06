@@ -251,7 +251,6 @@ color = Color( 0, 0.180392, 0.72549, 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Dialogbox/Box"]
 frames = SubResource( 24 )
 animation = "Close"
-frame = 9
 playing = true
 centered = false
 

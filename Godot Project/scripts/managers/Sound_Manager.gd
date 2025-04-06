@@ -31,9 +31,35 @@ onready var SND_PL_FOOTSTEP : AudioStreamPlayer = $snd_pl_footstep
 onready var SND_PL_TELEPORT_IN : AudioStreamPlayer = $snd_pl_teleport_in
 onready var SND_PL_TELEPORT_OUT : AudioStreamPlayer = $snd_pl_teleport_out
 onready var SND_PL_TELEPORT_LAND : AudioStreamPlayer = $snd_pl_teleport_land
-
 #Voices
 onready var X_VOICE := {
+	"jump" : 
+		[preload("res://sound_assests/player/X2/Voice/snd_player_voice_jump_01.wav"),
+		preload("res://sound_assests/player/X2/Voice/snd_player_voice_jump_01.wav")],
+	
+	"damage" :
+		[preload("res://sound_assests/player/X2/Voice/snd_player_voice_damage_01.wav"),
+		preload("res://sound_assests/player/X2/Voice/snd_player_voice_damage_01.wav"),
+		preload("res://sound_assests/player/X2/Voice/snd_player_voice_damage_01.wav")],
+		
+	"death":
+		preload("res://sound_assests/player/X/Voice/X7/snd_player_x_voice_death.wav"),
+		
+	"low_health":
+		preload("res://sound_assests/player/X/Voice/X7/snd_player_x_voice_low_health.wav"),
+		
+	"charge_shot":
+		[preload("res://sound_assests/player/X2/Voice/snd_player_voice_charge_shot_02.wav"),
+		preload("res://sound_assests/player/X2/Voice/snd_player_voice_charge_shot_02.wav")],
+
+	"big_charge_shot":
+		
+		[
+			preload("res://sound_assests/player/X2/Voice/snd_player_voice_charge_shot_01.wav")
+			]
+}
+
+onready var X_VOICE_ORIG := {
 	"jump" : 
 		[preload("res://sound_assests/player/X/Voice/X7/snd_player_x_voice_jump_01.wav"),preload("res://sound_assests/player/X/Voice/X7/snd_player_x_voice_jump_02.wav")],
 	
