@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://nodes/Levels/Level_Base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://nodes/entity/Items/Item_Dr_light_capsule.tscn" type="PackedScene" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://nodes/entity/Enemies/Entity_Enemy_Mega_Tortoise.tscn" type="PackedScene" id=26]
 [ext_resource path="res://nodes/Levels/dia1.gd" type="Script" id=27]
 [ext_resource path="res://nodes/GameObjects/Obj_flying_platform.tscn" type="PackedScene" id=28]
+[ext_resource path="res://nodes/entity/Enemies/Entity_Enemy_Frog.tscn" type="PackedScene" id=29]
 
 [sub_resource type="RectangleShape2D" id=29]
 extents = Vector2( 10, 84 )
@@ -330,7 +331,7 @@ shape = SubResource( 29 )
 [node name="ReferenceRect" parent="CameraBounds/Camera_Bounds2" index="1"]
 margin_left = 2167.0
 margin_top = -101.0
-margin_right = 2809.0
+margin_right = 3523.0
 margin_bottom = 240.0
 
 [node name="Item_HeartTank" parent="PickUps" index="0" instance=ExtResource( 17 )]
@@ -653,8 +654,27 @@ shape = SubResource( 38 )
 [node name="Obj_flying_platform" parent="Game_Objects" index="10" instance=ExtResource( 28 )]
 position = Vector2( 124, 132 )
 
+[node name="platforms2" type="Node2D" parent="Game_Objects" index="11"]
+position = Vector2( 2711, 393 )
+
+[node name="Obj_flying_platform" parent="Game_Objects/platforms2" index="0" instance=ExtResource( 28 )]
+position = Vector2( 21, -254 )
+
+[node name="Obj_flying_platform2" parent="Game_Objects/platforms2" index="1" instance=ExtResource( 28 )]
+position = Vector2( 103, -255 )
+
+[node name="Obj_flying_platform3" parent="Game_Objects/platforms2" index="2" instance=ExtResource( 28 )]
+position = Vector2( 187, -297 )
+
+[node name="Obj_flying_platform4" parent="Game_Objects/platforms2" index="3" instance=ExtResource( 28 )]
+position = Vector2( 286, -330 )
+
+[node name="Ent_Enemy_Spawner" parent="Game_Objects/platforms2" index="4" instance=ExtResource( 14 )]
+position = Vector2( -627, -265 )
+Enemy = ExtResource( 29 )
+
 [node name="Item_dr_light_capsule" parent="." index="14" instance=ExtResource( 2 )]
-position = Vector2( 289, 192 )
+position = Vector2( 196, 536 )
 
 [node name="dia" type="Node" parent="." index="15"]
 
