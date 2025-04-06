@@ -3645,6 +3645,9 @@ visible = false
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 shape = SubResource( 152 )
 
+[node name="State_Label" parent="." index="21"]
+visible = false
+
 [node name="X_Weapon_Wheel" type="Node2D" parent="." index="22"]
 visible = false
 light_mask = 0

@@ -6,6 +6,8 @@ extends Area2D
 export var allowRepeats = true
 
 onready var dialog_box = preload("res://nodes/managers/DialogManager.tscn")
+
+export var dialogPath = "light_capsules/dia_capsule_foot_part_first.json"
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -49,7 +51,7 @@ func _on_dia1_body_entered(body):
 	#	return
 	
 	var dia_box = dialog_box.instance()
-	dia_box.DialogPath = "res://JSON/dialog/light_capsules/dia_capsule_foot_part_first.json"
+	dia_box.DialogPath = "res://JSON/dialog/" + dialogPath
 	Global.Current_Hud.add_child(dia_box)
 	dia_box.connect("DialogEnded", self, "_on_Dialog_End")
 	

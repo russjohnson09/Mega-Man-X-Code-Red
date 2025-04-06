@@ -1,19 +1,13 @@
 [
 	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
-	"Text":"Hello my robot son."},
+	"Text":"LIGHT: Hello, Mega Man. You will need to navigate to the end of Flame Mammoth's factory and defeat him.."},
 	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
-	"Text":"Mega Man, Mega Man."},
+	"Text":"LIGHT: He is building a maverick army and must be stopped."},
+	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":1, 
+	"Text":"X: Right away Dr. Light. Do you have any advice for me?"},
 	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
-	"Text":"Hello Dr. Light."},
-	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
-	"Text":"test"},
-	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
-	"Text":"test"},
-	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
-	"Text":"test"},
-	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2, 
-	"Text":"test"},
-	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":2,
-	 "Text":"test"}
+	"Text":"LIGHT: Watch out for the red lava it is very hot."},
+	{"Amount" : 2, "Character_ID1":"X" ,"Character_ID2":"HoloDrLight", "EmotionID1":"Neutral", "EmotionID2":"Neutral", "CurrentSpeaker":1, 
+	"Text":"X: Yes, Dr. Light of course."}
 
 ]

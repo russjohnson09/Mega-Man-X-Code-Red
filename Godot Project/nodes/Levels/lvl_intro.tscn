@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://nodes/Levels/Level_Base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://nodes/entity/Items/Item_Dr_light_capsule.tscn" type="PackedScene" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://sprites/tile/Flame_Mammoth/flame_mammoth_1_bg_anim.tres" type="TileSet" id=25]
 [ext_resource path="res://nodes/entity/Enemies/Entity_Enemy_Mega_Tortoise.tscn" type="PackedScene" id=26]
 [ext_resource path="res://nodes/Levels/dia1.gd" type="Script" id=27]
+[ext_resource path="res://nodes/GameObjects/Obj_flying_platform.tscn" type="PackedScene" id=28]
 
 [sub_resource type="RectangleShape2D" id=29]
 extents = Vector2( 10, 84 )
@@ -291,6 +292,9 @@ extents = Vector2( 120, 1.5 )
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 192, 24 )
+
+[sub_resource type="RectangleShape2D" id=38]
+extents = Vector2( 3000, 10 )
 
 [sub_resource type="RectangleShape2D" id=37]
 extents = Vector2( 46, 65.5 )
@@ -635,8 +639,22 @@ linger_frames = 1
 position = Vector2( 16, -3 )
 shape = SubResource( 12 )
 
+[node name="Hitbox2" parent="Game_Objects" index="9" instance=ExtResource( 13 )]
+collision_mask = 2
+monitoring = false
+damage = 100
+ignore_iframes = true
+activate_iframes = false
+
+[node name="CollisionShape2D" parent="Game_Objects/Hitbox2" index="0"]
+position = Vector2( 1843, 307 )
+shape = SubResource( 38 )
+
+[node name="Obj_flying_platform" parent="Game_Objects" index="10" instance=ExtResource( 28 )]
+position = Vector2( 124, 132 )
+
 [node name="Item_dr_light_capsule" parent="." index="14" instance=ExtResource( 2 )]
-position = Vector2( -92, 334 )
+position = Vector2( 289, 192 )
 
 [node name="dia" type="Node" parent="." index="15"]
 
@@ -649,7 +667,18 @@ position = Vector2( 457, 112.5 )
 z_index = 4096
 shape = SubResource( 37 )
 
+[node name="dia2" type="Area2D" parent="dia" index="1"]
+z_index = 4096
+script = ExtResource( 27 )
+dialogPath = "dia_watch_out_for_the_bombs.json"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dia/dia2" index="0"]
+position = Vector2( 964, 139 )
+z_index = 4096
+shape = SubResource( 37 )
+
 [connection signal="body_entered" from="dia/dia1" to="dia/dia1" method="_on_dia1_body_entered"]
+[connection signal="body_entered" from="dia/dia2" to="dia/dia2" method="_on_dia1_body_entered"]
 
 [editable path="CameraBounds/Camera_Bounds"]
 [editable path="CameraBounds/Camera_Bounds2"]
@@ -658,3 +687,4 @@ shape = SubResource( 37 )
 [editable path="Animated_Objects/AnimatedSprite3"]
 [editable path="Animated_Objects/AnimatedSprite2"]
 [editable path="Game_Objects/Hitbox"]
+[editable path="Game_Objects/Hitbox2"]
