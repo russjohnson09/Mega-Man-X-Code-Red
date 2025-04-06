@@ -1,3 +1,5 @@
+#https://www.reddit.com/r/godot/comments/129sgc8/what_is_the_intended_workflow_for_inheriting/?rdt=34928
+#https://www.youtube.com/watch?v=qgxDBA9TC6s
 extends Node
 class_name level
 

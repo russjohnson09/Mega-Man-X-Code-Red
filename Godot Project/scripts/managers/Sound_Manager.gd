@@ -1,3 +1,4 @@
+# included in autoload Sound.SND_UI_SELECTION
 extends Node
 
 onready var SND_UI_SELECTION : AudioStreamPlayer = $snd_ui_selection_change

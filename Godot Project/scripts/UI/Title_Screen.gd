@@ -15,16 +15,24 @@ var pathToGo = null
 var canClick : bool = true
 
 onready var level_list = [
-	{"Name": "Hunter Base", "Path" : "res://nodes/Levels/Lvl_Hunter_Base.tscn"},
-	#{"Name": "Test Level", "Path" : "res://TestLevel.tscn"},
-	{"Name": "Test Level_2", "Path" : "res://nodes/Levels/Lvl_Test_2.tscn"},
-	{"Name": "Test Level", "Path" : "res://nodes/Levels/lvl_test_3.tscn"},
-	{"Name": "Slash Beast Boss", "Path" : "res://nodes/Levels/lvl_boss_test.tscn"},
-	{"Name": "Flame mammoth", "Path" : "res://nodes/Levels/Flame_mammoth.tscn"},
-	{"Name": "Flame Hyenard", "Path" : "res://nodes/Levels/Lvl_Flame_Hyenard.tscn"},
-	#{"Name": "Magma Dragoon", "Path" : "res://nodes/Levels/MagmaDragoon_Stage.tscn"},
-	{"Name": "Wind Crowrang", "Path" : "res://nodes/Levels/Lvl_Wind_Crowrang.tscn"}
+	{"Name": "Intro", "Path" : "res://nodes/Levels/lvl_intro.tscn"},
+	#{"Name": "Test", "Path" : "res://nodes/Levels/lvl_test.tscn"},
+	
+	#{"Name": "Flame mammoth", "Path" : "res://nodes/Levels/Flame_mammoth.tscn"},
+	
+	#{"Name": "Hunter Base", "Path" : "res://nodes/Levels/Lvl_Hunter_Base.tscn"},
 
+	#{"Name": "Test Level_2", "Path" : "res://nodes/Levels/Lvl_Test_2.tscn"},
+	#{"Name": "Test Level", "Path" : "res://nodes/Levels/lvl_test_3.tscn"},
+
+
+	#{"Name": "Flame Hyenard", "Path" : "res://nodes/Levels/Lvl_Flame_Hyenard.tscn"},
+
+	#{"Name": "Wind Crowrang", "Path" : "res://nodes/Levels/Lvl_Wind_Crowrang.tscn"},
+	
+		#{"Name": "Test Level", "Path" : "res://TestLevel.tscn"},
+			#{"Name": "Slash Beast Boss", "Path" : "res://nodes/Levels/lvl_boss_test.tscn"},
+	#{"Name": "Magma Dragoon", "Path" : "res://nodes/Levels/MagmaDragoon_Stage.tscn"},
 ]
 
 func _ready():
@@ -38,10 +46,12 @@ func _ready():
 	for a in $VBoxContainer2.get_children():
 		a.connect("focus_entered",self,"selection_changed")
 	_set_selected_characters([0,4])
-
-func _unhandled_input(event):
+	
+	
+func unhandledInputCanClick(event):
 
 	if event.is_action_pressed("ui_pause") and canClick:
+		print("unhandledInputCanClick ", menu_state, canClick)
 		match menu_state:
 			0:
 				$AudioStreamPlayer.play()
@@ -92,7 +102,12 @@ func _unhandled_input(event):
 						6:
 							Global.Characters_To_Spawn[n] = 2
 				Global.ViewPort.change_scene(pathToGo)
-				
+		
+	#print("nothing input can click")
+	pass
+	
+# handles character change
+func unhandledInputLeftOrRight(event):
 	if (event.is_action_pressed("left") or event.is_action_pressed("right")) and menu_state == 2:
 		var dir = -1 if event.is_action_pressed("left") else 1
 		
@@ -103,8 +118,44 @@ func _unhandled_input(event):
 				_set_selected_characters([(selected_characters[0] + characters.size() + dir) % characters.size(),selected_characters[1]])
 			1:
 				_set_selected_characters([selected_characters[0],(selected_characters[1] + characters.size() + dir) % characters.size()])
+	else:
+		print("nothing input left right")
+
+
+func handleUiUpDown(event):
+	print("up ", event.is_action_pressed("up"))
+	
+	if event.is_action_pressed("up"):
+		print("handleUiUpDown")
+		$AudioStreamPlayer.play()
+		canClick = false
+		$Yield_Timer.start(0.33);yield($Yield_Timer,"timeout")
+		canClick = true
+		
+		$VBoxContainer.visible = true
+		$VBoxContainer.get_child(0).grab_focus()
+		$Label.visible = false
+		menu_state = 1
+		$UiArrowPlaceHolder.visible = true
+		$UiArrowPlaceHolder.global_position.y = $VBoxContainer.get_focus_owner().rect_global_position.y
+
+		
+
+#Called when an InputEvent hasn't been consumed by _input() or any GUI Control item. 
+#The input event propagates up through the node tree until a node consumes it.
+func _unhandled_input(event):
+	var x = 1
+	unhandledInputCanClick(event)
+	
+
+	#
+	#unhandledInputLeftOrRight(event)
+	#pass
+	handleUiUpDown(event)
+
 
 func selection_changed():
+	print("selection_changed")
 	if menu_state > 0:
 		Sound.play_sound(Sound.SND_UI_SELECTION,-3,1)
 	$UiArrowPlaceHolder.global_position.y = $VBoxContainer.get_focus_owner().rect_global_position.y
