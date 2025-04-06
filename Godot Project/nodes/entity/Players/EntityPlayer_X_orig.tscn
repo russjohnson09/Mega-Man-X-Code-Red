@@ -1,4 +1,4 @@
-[gd_scene load_steps=386 format=2]
+[gd_scene load_steps=384 format=2]
 
 [ext_resource path="res://nodes/entity/Players/EntityPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/character/Player/X/sprite_sheet/spr_pla_X_spawn.png" type="Texture" id=2]
@@ -10,8 +10,6 @@
 [ext_resource path="res://sprites/character/Player/X/color_palette/color_pallete_x_ultimate_armor.png" type="Texture" id=8]
 [ext_resource path="res://sprites/character/Player/X/color_palette/color_pallete_x_standard.png" type="Texture" id=9]
 [ext_resource path="res://sprites/character/Player/X/sprite_sheet/spr_pla_X_special_attack_2.png" type="Texture" id=10]
-[ext_resource path="res://sound_assests/player/X2/snd_player_jump.wav" type="AudioStream" id=11]
-[ext_resource path="res://sound_assests/player/X2/snd_player_damage.wav" type="AudioStream" id=12]
 [ext_resource path="res://scripts/entity/Player/X-weapons/Entity_Player_X_Weapon_manager.gd" type="Script" id=14]
 [ext_resource path="res://sprites/character/Player/X/sprite_sheet/spr_pla_X_idle.png" type="Texture" id=15]
 [ext_resource path="res://sprites/character/Player/X/sprite_sheet/spr_pla_X_idle_shoot.png" type="Texture" id=16]
@@ -3675,12 +3673,6 @@ anims/open = SubResource( 482 )
 [node name="Open_timer" type="Timer" parent="X_Weapon_Wheel" index="9"]
 pause_mode = 1
 one_shot = true
-
-[node name="snd_player_jump" parent="Sounds" index="0"]
-stream = ExtResource( 11 )
-
-[node name="snd_player_damage" parent="Sounds" index="2"]
-stream = ExtResource( 12 )
 
 [node name="Shot_Anim_Timer" type="Timer" parent="." index="31"]
 unique_name_in_owner = true

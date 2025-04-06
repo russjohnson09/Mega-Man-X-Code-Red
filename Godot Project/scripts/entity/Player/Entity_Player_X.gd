@@ -1,5 +1,11 @@
 extends "res://scripts/entity/Player/EntityPlayer.gd"
 
+# Sounds.snd_player_jump controls
+# the sound effects while the player's voice is controlled
+# by Sound_Manager.
+
+
+
 
 #onready var flash_anim_player : AnimationPlayer = $Flash_AnimationPlayer
 
