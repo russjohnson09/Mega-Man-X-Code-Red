@@ -256,6 +256,7 @@ points = PoolVector2Array( 8, 16, 16, 12, 16, 16 )
 1/autotile/navpoly_map = [  ]
 1/autotile/priority_map = [  ]
 1/autotile/z_index_map = [  ]
+1/autotile/fallback_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )

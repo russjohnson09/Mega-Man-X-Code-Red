@@ -3553,13 +3553,11 @@ visible = false
 modulate = Color( 1.2, 1.2, 1.2, 1 )
 use_parent_material = true
 frames = SubResource( 181 )
-frame = 9
 playing = true
 
 [node name="Head_part_crush" type="AnimatedSprite" parent="Sprite" index="2"]
 visible = false
 frames = SubResource( 398 )
-frame = 2
 playing = true
 
 [node name="Saber_Container" type="Node2D" parent="Sprite" index="3"]
@@ -3595,7 +3593,6 @@ disabled = true
 [node name="Dash_jet_effect" parent="." index="6"]
 position = Vector2( 0, 14 )
 frames = SubResource( 501 )
-frame = 7
 playing = true
 offset = Vector2( -38, 0 )
 
@@ -3607,7 +3604,6 @@ position = Vector2( 22, -7 )
 [node name="Muzzle" type="AnimatedSprite" parent="Projectile_Spawn/Projectile_Spawn_Point" index="0"]
 frames = SubResource( 418 )
 animation = "buster_4"
-frame = 6
 playing = true
 
 [node name="Muzzle_Back" type="AnimatedSprite" parent="Projectile_Spawn/Projectile_Spawn_Point/Muzzle" index="0"]

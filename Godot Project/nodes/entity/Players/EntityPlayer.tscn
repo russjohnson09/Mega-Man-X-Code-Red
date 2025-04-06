@@ -93,16 +93,12 @@ collision_layer = 2
 collision_mask = 132
 
 [node name="State_Label" type="Label" parent="." index="16"]
-visible = false
 margin_left = -99.0
 margin_top = -48.0
 margin_right = 99.0
 margin_bottom = -34.0
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Sounds" type="Node" parent="." index="17"]
 
